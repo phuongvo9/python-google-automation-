@@ -1,4 +1,7 @@
 #! /usr/bin/env python3
+
+# boolean func to check localhost and network connectivity - Internet access
+
 import requests
 import socket
 def check_localhost():
