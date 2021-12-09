@@ -1,3 +1,5 @@
+#Quiz
+
 def format_name (first_name,last_name):
     # code goes here
     string = 'Name:' + ', ' .join([name for name in [last_name, first_name] if name]) if any([last_name, first_nam]) else ''
@@ -14,3 +16,4 @@ print(format_name("Voltair",""))
 
 print(format_name("",""))
 #Should return an empty string
+
