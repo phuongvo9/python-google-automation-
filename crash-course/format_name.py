@@ -10,6 +10,7 @@ print (format_name ("Ernest","Hemingway"))
 print (format_name("","Madona"))
 # Should return "Name: Madona"
 
+
 print(format_name("Voltair",""))
 # Should return "Name: Voltaire"
 
