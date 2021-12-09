@@ -9,3 +9,7 @@ def color_translator(color):
 
 print(color_translator("blue")) #Should be #0000fff
 print(color_translator("yellow")) # should be unknown
+print(color_translator("red")) #should be #ff0000
+print(color_translator("black")) #shouldbe #00ff00
+print(color_translator("green")) #should be #00ff00
+print(color_translator("")) #should be unknown
