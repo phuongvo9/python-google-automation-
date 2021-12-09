@@ -13,3 +13,4 @@ print(color_translator("red")) #should be #ff0000
 print(color_translator("black")) #shouldbe #00ff00
 print(color_translator("green")) #should be #00ff00
 print(color_translator("")) #should be unknown
+
