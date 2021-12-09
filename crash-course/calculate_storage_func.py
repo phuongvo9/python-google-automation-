@@ -12,8 +12,8 @@ def calculate_storage(filesize):
     #Use the modulo operator to check whether there's any remainder:
     partial_block_remainder = filesize % block_size
     if partial_block_remainder > 0:
-        return block_size(full_blocks+1)
-    return block_size*full_blocks
+        return block_size * (full_blocks+1)
+    return block_size * full_blocks
 
 print(calculate_storage(1))    # Should be 4096
 print(calculate_storage(4096)) # Should be 4096
