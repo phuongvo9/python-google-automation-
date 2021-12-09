@@ -7,3 +7,7 @@ def factorial(n):
     for i in range (1,n+1):
         result = result * i
     return result
+
+print(factorial(10)) # should be 3628800
+print(factorial(2)) # should be 2
+print(factorial(7)) # should be 5040
