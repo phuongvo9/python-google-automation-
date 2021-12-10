@@ -1,7 +1,9 @@
+#!/usr/bin/env python3
+
 # Reading and Writing files
 # Creates a new file object and assigning it to a variable called file
 
-file = open ("using-python-to-interact-with-the-operating-system/week-two/spider.txt")
+file = open ("spider.txt")
 
 # readline method reads a single line of a file
 print(file.readline())
