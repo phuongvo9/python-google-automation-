@@ -1,7 +1,7 @@
 """READING CSV FILES"""
 
 import csv
-
+import os
 f = open ("csv/csv_file.txt")
 
 #parases the file using the CSV module
@@ -46,4 +46,4 @@ with open ("csv/by_department.csv", "w") as by_department:
     writer.writeheader()
     writer.writerows(users)
 
-# os.removes ("csv/by_department.csv")
+os.remove ("csv/by_department.csv")
