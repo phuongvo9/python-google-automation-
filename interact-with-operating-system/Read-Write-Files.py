@@ -14,6 +14,8 @@ print(file.read())
 file.close
 
 
+#############  WITH OPEN _ FILE ################333
+
 """With keyword creates block of code with the work needs to be done with the file inside"""
 
 """When 'with' is used. Python will automatically close the file"""
@@ -21,5 +23,18 @@ file.close
 with open("spider.txt") as file:
     print (file.readline())
 
+with open ("spider.txt") as file:
+    print (file.readline())
+
+with open ("spider.txt") as file:
+    for line in file:
+        print(line.upper())
+
+
+# Empty lines can be avoided by using STRIP
+
+with open ("spider.txt") as file:
+    for line in file:
+        print (line.strip().upper())
 
 
