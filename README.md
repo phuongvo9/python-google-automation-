@@ -1,5 +1,5 @@
 # python-google-automation-
-Exercise https://www.coursera.org/professional-certificates/google-it-automation?
+* [Professional certificate program] (https://www.coursera.org/professional-certificates/)google-it-automation?
 
 
 # Credit
