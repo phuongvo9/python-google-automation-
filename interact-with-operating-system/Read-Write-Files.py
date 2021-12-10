@@ -10,6 +10,16 @@ print(file.readline())
 print (file.readline())
 
 print(file.read())
-
+# We have to close opened file
 file.close
+
+
+"""With keyword creates block of code with the work needs to be done with the file inside"""
+
+"""When 'with' is used. Python will automatically close the file"""
+
+with open("spider.txt") as file:
+    print (file.readline())
+
+
 
