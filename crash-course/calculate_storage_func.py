@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
  #If a filesystem has a block size of 4096 bytes, this means that a file comprised of only one byte will still use 4096 bytes of storage. \
  #file made up of 4097 bytes will use 4096*2=8192 bytes of storage. Calculate storage function
 

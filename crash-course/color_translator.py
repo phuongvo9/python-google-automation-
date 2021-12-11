@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def color_translator(color):
     if color == "red":
         hex_color = "#ff0000"
