@@ -12,13 +12,13 @@ if __name__ == '__main__':
 
 scores = list(arr)
 
+# Find winner
+winner = 0
+for i in scores:
+    if i > winner:
+        winner = i
 
-# winner = 0
-# for i in scores:
-#     if i > winner:
-#         winner = i
-
-winner = max(scores)
+#winner = max(scores)
 low_scores = []
 for item in scores:
     if item < winner:
