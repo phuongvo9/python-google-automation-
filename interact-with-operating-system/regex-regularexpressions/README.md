@@ -1,7 +1,7 @@
 # Using Python to Interact with the Operating System - 
 
 ## Credit
-* [Coursera.com - Python Operating System Week 3](https://www.coursera.org/learn/python-operating-system/home/week/3)
+* [Coursera.org - Python Operating System Week 3](https://www.coursera.org/learn/python-operating-system/home/week/3)
 
 
 
