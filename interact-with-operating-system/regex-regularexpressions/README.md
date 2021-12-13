@@ -1,7 +1,7 @@
 # Using Python to Interact with the Operating System - 
 
 ## Credit
-* [Coursera.org - Python Operating System Week 3](https://www.coursera.org/learn/python-operating-system/home/week/3)
+* [Coursera.org - Python Operating System](https://www.coursera.org/learn/python-operating-system/home/week/3)
 
 
 
@@ -55,7 +55,7 @@ A **wildcard** can match more than one character.
 * . in a regular expressions as a special character that can match any character.
 * Using a . is the broadest possible wildcard because it matches absolutely any character.
 
-Character classes are written inside square brackets, []:
+**Character classes** are written inside square brackets, []:
 * It list the characters to match inside of the brackets
 * A range of characters can be defined using a dash
 * Use a ^, circumflex, inside the square brackets to match any characters that aren't in a group.
