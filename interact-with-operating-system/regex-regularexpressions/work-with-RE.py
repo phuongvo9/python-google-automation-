@@ -34,3 +34,19 @@ print (result[1]) #Output: 411601
 
 ##### --------------------------------------------------------------------------
 
+result = re.search(r'aza', 'bazaar')
+print (result) #output:  <re.Match object; span=(1, 4), match='aza'>
+
+# None is a special value that there's none actual value there - None for no returns
+result = re.search (r'aza','maze')
+print(result) #output: None
+
+print(re.search (r"%x","xenon"))    # None
+print(re.search(r"p.ng","penguin")) # <re.Match object; span=(0, 4), match='peng'>
+print(re.search(r"p.ng", "sponge")) # <re.Match object; span=(1, 5), match='pong'>
+
+
+
+
+
+
