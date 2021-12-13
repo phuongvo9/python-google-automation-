@@ -15,9 +15,15 @@ import re
 
 log = "July 31 7:51:48 mycomputer bad_process[411601]: ERROR Perfroming package upgrade"
 
-#  \d to match digits
-# +, plus character, to match one or more occurrences
-# [ ] square brackets [] - character classes
+
+"""
+    The "r" at the beginning of the pattern indicates that this is a rawstring
+    Always use rawstrings for regular expressions in Python
+    \d to match digits
+    +, plus character, to match one or more occurrences
+    [ ] square brackets [] - character classes
+"""
+
 
 regex = r"\[(\d+)\]"
 result = re.search (regex, log)
@@ -25,4 +31,6 @@ result = re.search (regex, log)
 
 print (result[0]) #Output: [411601]
 print (result[1]) #Output: 411601
+
+##### --------------------------------------------------------------------------
 
