@@ -15,8 +15,7 @@ def score_words(words):
 
 
 
-
-if '__name__' == '__main__':
+if __name__ == '__main__':
     n = int(input())
     words = input().split()
     print(score_words(words))
