@@ -6,7 +6,12 @@ store them in a nested list and print the name(s) of any student(s) having the s
 """
 
 if __name__ == '__main__':
-    for _ in range (int(input())):
+    records = []
+    for i in range (int(input())):
         name = input()
         score = float(input())
+
+        #input records
+        records.append([name,score])
     
+    print (records)
