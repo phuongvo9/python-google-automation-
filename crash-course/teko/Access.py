@@ -27,7 +27,7 @@ for t in range(m):
 #####
 
 #  N — the number of files contained in the filesystem
-n = int (intput())
+n = int (input())
 
 # Empty dictionary - # Use dictionary to store <filename> <Read Write Execute>
 dictionary1 = {}
