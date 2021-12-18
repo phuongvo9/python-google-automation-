@@ -42,5 +42,3 @@ if __name__ == '__main__':
         print ("YES")
     else:
         print ("NO")
-
-# Hint: https://www.geeksforgeeks.org/password-validation-in-python/
