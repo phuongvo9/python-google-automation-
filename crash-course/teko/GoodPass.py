@@ -22,7 +22,7 @@ def isGoodpassword (yourpass):
     elif not re.serach (r"[0-9]", yourpass):
         return False
     
-    elif not re.search (r"\[$#@\]")
+    elif not re.search (r"\[$#@\]"):
         return False
     return True
 
