@@ -10,19 +10,19 @@ def isGoodpassword (yourpass):
     Check password with if else blocks
     """
     # Length is not valid
-    if yourpass < 6 or yourpass > 16:
+    if len(yourpass) < 6 or len(yourpass) > 16:
         return False
     # not have any character in [a-z] - use rawstring from coursera
     elif not re.search (r"[a-z]", yourpass):
         return False
     # not have any character in [A-Z]
-    elif not re.serach (r"[A-Z]", yourpass):
+    elif not re.search (r"[A-Z]", yourpass):
         return False
     # not have any character in [0-9]
-    elif not re.serach (r"[0-9]", yourpass):
+    elif not re.search (r"[0-9]", yourpass):
         return False
     
-    elif not re.search (r"\[$#@\]"):
+    elif not re.search (r"\[$#@\]", yourpass):
         return False
     return True
 
