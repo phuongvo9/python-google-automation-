@@ -52,3 +52,5 @@ print(re.search(r"p.ng", "Pangaea2s", re.IGNORECASE)) # <re.Match object; span=(
 
 
 
+
+
