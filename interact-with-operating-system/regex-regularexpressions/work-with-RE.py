@@ -45,7 +45,9 @@ print(re.search (r"%x","xenon"))    # None
 print(re.search(r"p.ng","penguin")) # <re.Match object; span=(0, 4), match='peng'>
 print(re.search(r"p.ng", "sponge")) # <re.Match object; span=(1, 5), match='pong'>
 
-
+# search function can be added as a third parameter
+print(re.search(r"p.ng", "Pangaea", re.IGNORECASE)) # <re.Match object; span=(0, 4), match='Pang'>
+print(re.search(r"p.ng", "Pangaea2s", re.IGNORECASE)) # <re.Match object; span=(0, 4), match='Pang'>
 
 
 
