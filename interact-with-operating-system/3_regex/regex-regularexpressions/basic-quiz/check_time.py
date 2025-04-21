@@ -15,3 +15,13 @@ print(check_time("6:60am")) # False
 print(check_time("five o'clock")) # False
 print(check_time("6:02 am")) # True
 print(check_time("6:02km")) # False
+
+# Explanation:
+# ^ - Start of the string
+# (1[0-2]|[1-9]) - Matches the hour part (1-12) with no leading zero
+# : - Matches the colon
+# ([0-5][0-9]) - Matches the minute part (00-59)
+# ? - Matches an optional space
+# ([AaPp][Mm]) - Matches AM or PM (case insensitive)
+# $ - End of the string
+# re.search() - Searches for the pattern in the text
