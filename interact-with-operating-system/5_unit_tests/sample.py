@@ -69,3 +69,20 @@ class TestCakeFactory(unittest.TestCase):
 
 # Running the unittests
 unittest.TextTestRunner().run(unittest.TestLoader().loadTestsFromTestCase(TestCakeFactory))
+
+import unittest
+
+
+# Fixing the test_check_price method
+# class TestCakeFactory(unittest.TestCase):
+#  # ... Other tests remain the same
+
+#  def test_check_price(self):
+#      cake = CakeFactory("vanilla", "large")
+#      cake.add_topping("sprinkles")
+#      cake.add_topping("cherries")
+#      price = cake.check_price()
+#      self.assertEqual(price, 14) # Vanilla cake, large size + 2 toppings
+
+# # Re-running the unittests
+# unittest.TextTestRunner().run(unittest.TestLoader().loadTestsFromTestCase(TestCakeFactory))
