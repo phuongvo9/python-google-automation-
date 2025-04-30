@@ -154,3 +154,92 @@ class TestLibrary(unittest.TestCase):
 library_test_output = unittest.TextTestRunner().run(unittest.TestLoader().loadTestsFromTestCase(TestLibrary))
 print(library_test_output)
 ```
+Tests can be grouped together according to the features they test. In unittest, this functionality is known as a test suite, and it allows developers to organize how and in which order their tests are run. 
+
+
+In each respective phase, an instance of the library class was created. The title of the book was defined as “Python Design Patterns,” a new book was added to the library using the add_book method, and a check was run to see if the new book was successfully added to the library’s collection using the has_book method.
+
+# Test suites
+Test suites
+Testing can be time-intensive, but there are ways that you can optimize the testing process. The following methods and modules allow you to define instructions that execute before and after each test method:
+
+setUp() can be called automatically with every test that’s run to set up code. 
+
+tearDown() helps clean up after the test has been run. 
+
+If setUp()raises an exception during the test, the unittest framework considers this to be an error and the test method is not executed. If setUp() is successful, tearDown() runs even if the test method fails. You can add these methods to your unit tests, which you can then include in a test suite. Test suites are collections of tests that should be executed together—so all of the topics covered in this reading can be included within a test suite. 
+
+Consider the following code example to see how each of these unit testing components is used together and run within a test suite:
+```python
+import unittest
+import os
+import shutil
+
+# Function to test
+def simple_addition(a, b):
+	return a + b
+
+# Paths for file operations
+ORIGINAL_FILE_PATH = "/tmp/original_test_file.txt"
+COPIED_FILE_PATH = "/mnt/data/copied_test_file.txt"
+
+# Global counter
+COUNTER = 0
+
+# This method will be run once before any tests or test classes
+def setUpModule():
+	global COUNTER
+	COUNTER = 0
+    
+	# Create a file in /tmp
+	with open(ORIGINAL_FILE_PATH, 'w') as file:
+    	file.write("Test Results:\n")
+
+# This method will be run once after all tests and test classes
+def tearDownModule():
+	# Copy the file to another directory
+	shutil.copy2(ORIGINAL_FILE_PATH, COPIED_FILE_PATH)
+    
+	# Remove the original file
+	os.remove(ORIGINAL_FILE_PATH)
+
+class TestSimpleAddition(unittest.TestCase):
+
+	# This method will be run before each individual test
+	def setUp(self):
+    	global COUNTER
+    	COUNTER += 1
+
+	# This method will be run after each individual test
+	def tearDown(self):
+    	# Append the test result to the file
+    	with open(ORIGINAL_FILE_PATH, 'a') as file:
+        	result = "PASSED" if self._outcome.success else "FAILED"
+        	file.write(f"Test {COUNTER}: {result}\n")
+
+	def test_add_positive_numbers(self):
+    	self.assertEqual(simple_addition(3, 4), 7)
+
+	def test_add_negative_numbers(self):
+    	self.assertEqual(simple_addition(-3, -4), -7)
+
+# Running the tests
+suite = unittest.TestLoader().loadTestsFromTestCase(TestSimpleAddition)
+runner = unittest.TextTestRunner()
+runner.run(suite)
+
+# Read the copied file to show the results
+with open(COPIED_FILE_PATH, 'r') as result_file:
+	test_results = result_file.read()
+
+print(test_results)
+```
+
+ In the example, a global counter is initialized in setUpModule. The counter is incremented in the setUp method before each test starts. After each test is completed, the tearDown method checks the test result and appends it to the temporary file. During module teardown in tearDownModule, the temporary file is copied to another directory and the original file is deleted.  
+
+# Key takeaways
+The real strength of unit testing is when you combine it with exceptions. Because exceptions are objects, the object-oriented nature of the unittest framework makes them synergize well together. Assertions help to document expected behavior, create more specific test codes, and help to safeguard against future changes. Unit testing is also a way to optimize a process within the software development lifecycle—through automated testing. Remember, writing code is important, but writing strong tests is even more so!
+
+For more information on unittest and unit testing, visit 
+https://docs.python.org/3/library/unittest.html
+   
