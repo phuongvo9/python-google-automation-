@@ -1,0 +1,4 @@
+# Example of a test case
+The `None` in the `testcase` list likely represents a placeholder for an unused or optional parameter in the `find_email` function. This could be because the `find_email` function expects a list with a specific number of elements (e.g., `[id, first_name, last_name]`), where the first element (`id`) is not relevant for these test cases.
+
+By including `None` as the first element, the test cases ensure that the input matches the expected structure of the function's arguments, even if the first element is not used in the logic. This helps maintain consistency and avoids errors related to mismatched input formats.
