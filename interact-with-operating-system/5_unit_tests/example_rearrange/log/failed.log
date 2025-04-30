@@ -1,0 +1,30 @@
+./unittest_rearrange.py
+..EE
+======================================================================
+ERROR: test_empty_string (__main__.TestRearrange.test_empty_string)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/interact-with-operating-system/5_unit_tests/rearrange/./unittest_rearrange.py", line 17, in test_empty_string
+    self.assertEqual(rearrange_name(testcase), expected)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/interact-with-operating-system/5_unit_tests/rearrange/rearrange.py", line 10, in rearrange_name
+    return "{} {}".format(result[2], result[1])
+                          ~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+======================================================================
+ERROR: test_one_name (__main__.TestRearrange.test_one_name)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/interact-with-operating-system/5_unit_tests/rearrange/./unittest_rearrange.py", line 26, in test_one_name
+    self.assertEqual(rearrange_name(testcase), expected)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/interact-with-operating-system/5_unit_tests/rearrange/rearrange.py", line 10, in rearrange_name
+    return "{} {}".format(result[2], result[1])
+                          ~~~~~~^^^
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.001s
+
+FAILED (errors=2)
