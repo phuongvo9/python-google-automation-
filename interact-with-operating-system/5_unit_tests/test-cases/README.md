@@ -113,3 +113,44 @@ python -m unittest test_module.TestClass.test_method
 Test modules can also be called using a file path, as written below:
 
 python -m unittest tests/test_something.py
+
+
+# Unit test design patterns
+One pattern that you can use for unit tests is made up of three phases: arrange, act, and assert. Arrange represents the preparation of the environment for testing; act represents the action, or the objective of the test, performed; and assert represents whether the results checked are expected or not. 
+
+Imagine building a system for a library. The objective is to test whether a new book can be added to the library's collection and then to check if the book is in the collection. Using the above structure of arrange, act, and assert, consider the following example code:
+
+What’s given (arrange): A library with a collection of books
+
+When to test (act): A new book is added to the collection
+
+Then check (assert): The new book should be present in the library's collection
+```python
+class Library:
+	def __init__(self):
+		self.collection = []
+
+	def add_book(self, book_title):
+		self.collection.append(book_title)
+
+	def has_book(self, book_title):
+		return book_title in self.collection
+
+# Unit test for the Library system
+class TestLibrary(unittest.TestCase):
+
+	def test_adding_book_to_library(self):
+    	# Arrange
+		library = Library()
+		new_book = "Python Design Patterns"
+
+    	# Act
+    	library.add_book(new_book)
+
+    	# Assert
+    	self.assertTrue(library.has_book(new_book))
+
+# Running the test
+library_test_output = unittest.TextTestRunner().run(unittest.TestLoader().loadTestsFromTestCase(TestLibrary))
+print(library_test_output)
+```
